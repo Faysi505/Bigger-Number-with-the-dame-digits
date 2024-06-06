@@ -2,7 +2,7 @@
 This code will return number with the same digits that input number have.
 For example:
 
-  12 ==> 21 
+  ```12 ==> 21 ```
   
  513 ==> 531 
  
