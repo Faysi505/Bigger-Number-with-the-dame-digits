@@ -22,7 +22,7 @@ Prerequisites:
 
 Execute the compiled program with the input number:
 
-`/Bigger-Number-with-the-dame-digits <input_number>`
+`./MainFile.o`
 
 ## For example:
 ### INPUT
@@ -45,8 +45,9 @@ Execute the compiled program with the input number:
 ## Contributions
 `Contributions are welcome! If you have suggestions for improvements or find any bugs, please open an issue or submit a pull request.`
 
-### Thank you for using this program! I hope it helps you find the next larger number with ease.
 
-
-
+## Flowchart for the Main code
 ![image](https://github.com/Faysi505/Bigger-Number-with-the-dame-digits/assets/156437626/70999c7c-d3e1-475f-bd38-37d61025a104)
+
+
+### Thank you for using this program! I hope it helps you find the next larger number with ease.
