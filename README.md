@@ -22,11 +22,11 @@ Prerequisites:
 
 Execute the compiled program with the input number:
 
-`Bigger-Number-with-the-dame-digits <input_number>`
+`/Bigger-Number-with-the-dame-digits <input_number>`
 
 ## For example:
 ### INPUT
-```Bigger-Number-with-the-dame-digits 1234```
+```1234```
 ### OUTPUT
 ```2134```
 ## Algorithm
@@ -46,3 +46,7 @@ Execute the compiled program with the input number:
 `Contributions are welcome! If you have suggestions for improvements or find any bugs, please open an issue or submit a pull request.`
 
 ### Thank you for using this program! I hope it helps you find the next larger number with ease.
+
+
+
+![image](https://github.com/Faysi505/Bigger-Number-with-the-dame-digits/assets/156437626/70999c7c-d3e1-475f-bd38-37d61025a104)
