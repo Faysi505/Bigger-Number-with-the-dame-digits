@@ -1,24 +1,9 @@
-# System programm Bigger-Number-with-the-dame-digits
+Overview
+This repository contains a program designed to find the next larger number using the same digits as the given input number. The program is particularly tailored for long long integers.
 
-
-
-
-This code will return number with the same digits that input number have.
-Usage
-<font color="red">For example:</font>
-
-  ```
-12 ==> 21 
-  
- 513 ==> 531 
- 
-2017 ==> 2071 
+Features
 ```
-If the digits can't be rearranged to form a bigger number, return -1:
-
-```  9 ==> -1
-  
-111 ==> -1
-
-531 ==> -1
-
+Input : Accepts long long integers as input.
+Digit Rearrangement: Reorganizes the digits to form the next larger number.
+Efficiency: Optimized to handle large numbers efficiently.
+```
