@@ -34,7 +34,7 @@ To run a program type `./MainFile.o` and then any number.
 ```2134```
 ## Algorithm
 
-> Identify the Pivot: Traverse the number from right to left to find the first digit that is smaller than the digit next to it.
+> Identify the Main number (Pivot): Traverse the number from right to left to find the first digit that is smaller than the digit next to it.
 
 > Find the Successor: From the right end, find the smallest digit larger than the pivot and swap them.
 
