@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Swap
 void swap(int *a, int *b) {
-    int temp = *a;
+    int TempNum = *a;
     *a = *b;
-    *b = temp;
+    *b = TempNum;
 }
 
+// From a to b swap
 void reverse(int arr[], int start, int end) {
     while (start < end) {
         swap(&arr[start], &arr[end]);
@@ -16,62 +18,79 @@ void reverse(int arr[], int start, int end) {
 }
 
 long long next_bigger_number(long long n) {
-    long long temp = n;
+    long long TempNum = n;
     int counter = 0;
-    
-    while (temp != 0) {
-        temp /= 10;                               //Lenght
+
+    while (TempNum != 0) {
+        TempNum /= 10;
         counter++;
     }
-    
-    int *Array = (int *)malloc(counter * sizeof(int));
-    if (Array == NULL) {
+
+    int *MainArray = (int *)malloc(counter * sizeof(int));
+    if (MainArray == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         return -1;
     }
 
-    temp = n;
+    // Storing in revers order
+    TempNum = n;
     counter = 0;
-    
-    while (temp != 0) {
-        Array[counter] = temp % 10;                 // V array
-        temp /= 10;
+    while (TempNum != 0) {
+        MainArray[counter] = TempNum % 10;
+        TempNum /= 10;
         counter++;
     }
-    
+
     int Len = counter;
-    reverse(Array, 0, Len - 1);
-    
+    reverse(MainArray, 0, Len - 1);
+
     int i;
-    for (i = Len - 1; i >= 0; i--) {
-        if (Array[i] < Array[i + 1]) {        //i = Main number
+    for (i = Len - 2; i >= 0; i--) {
+        if (MainArray[i] < MainArray[i + 1]) {
             break;
         }
     }
     if (i == -1) {
+        free(MainArray); // Free allocated memory
         return -1;
     }
-    
+
+    // Find bigger digit then the Pivot
     int smallest = i + 1;
     for (int j = i + 1; j < Len; j++) {
-        if (Array[j] > Array[i] && Array[j] <= Array[smallest]) {
-            smallest = j;                    // higher then Mainnum
+        if (MainArray[j] > MainArray[i] && MainArray[j] <= MainArray[smallest]) {
+            smallest = j;
         }
     }
-    swap(&Array[i], &Array[smallest]);
-    reverse(Array, i + 1, Len - 1);
-    
+
+    swap(&MainArray[i], &MainArray[smallest]);
+
+    reverse(MainArray, i + 1, Len - 1);
+
+    // Arr > number
     long long result = 0;
-    for (int k = 0; k < Len; k++) {                   //V chislo
-        result = result * 10 + Array[k];
+    for (int k = 0; k < Len; k++) {
+        result = result * 10 + MainArray[k];
     }
-    
+
+    free(MainArray); 
     return result;
 }
 
 int main() {
-    long long number = 46321;
+    long long number;
+    printf("Введите число:");
+    if (scanf("%lld", &number) != 1) {
+        fprintf(stderr, "ошибка ввода\n");
+        return 1;
+    }
+
     long long result = next_bigger_number(number);
-    printf("Следующие число: %lld\n", result);
+    if (result == -1) {
+        printf("Невозможно найти число больше\n");
+    } else {
+        printf("Следующие число:: %lld\n", result);
+    }
+
     return 0;
 }
