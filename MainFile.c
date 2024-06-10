@@ -84,8 +84,7 @@ int main() {
         fprintf(stderr, "ошибка ввода\n");
         return 1;
     }
-git rebase origin/main
-
+    
     long long result = next_bigger_number(number);
     if (result == -1) {
         printf("Невозможно найти число больше\n");
