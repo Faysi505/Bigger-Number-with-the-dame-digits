@@ -1,18 +1,56 @@
-# Bigger-Number-with-the-dame-digits
-This code will return number with the same digits that input number have.
-For example:
+# Overview
 
-  12 ==> 21 
-  
- 513 ==> 531 
- 
-2017 ==> 2071 
+> This repository contains a program designed to find the next larger number
+using the same digits as the given input number. The program is particularly
+tailored for long long integers.
 
-If the digits can't be rearranged to form a bigger number, return -1:
 
-  9 ==> -1
-  
-111 ==> -1
+## Features
 
-531 ==> -1
+> Input : Accepts long long integers as input.
 
+> Digit Rearrangement: Reorganizes the digits to form the next larger number.
+
+> Efficiency: Optimized to handle large numbers efficiently.
+
+## How to Use
+Prerequisites:
+
+> Ensure you have a C++ compiler installed on your system.
+
+## Running the Program
+
+To run a program type `./MainFile.o` to the terminal and then any number.
+
+## For example:
+### INPUT
+```
+./MainFile.o
+```
+```
+1234
+```
+### OUTPUT
+```2134```
+## Algorithm
+
+> Identify the Main number (Pivot): Traverse the number from right to left to find the first digit that is smaller than the digit next to it.
+
+> Find the Successor: From the right end, find the smallest digit larger than the pivot and swap them.
+
+> Sort the Suffix: Reverse the digits to the right of the pivot to get the smallest possible sequence.
+
+## CodeWars task example: [codewars](https://www.codewars.com/kata/55983863da40caa2c900004e)
+
+
+## License
+`This project is licensed under the MIT License. See the LICENSE file for details.`
+## Contributions
+`Contributions are welcome! If you have suggestions for improvements or find any bugs, please open an issue or submit a pull request.`
+
+
+## Flowchart for the Main code
+![image](https://github.com/Faysi505/Bigger-Number-with-the-dame-digits/assets/156437626/70999c7c-d3e1-475f-bd38-37d61025a104)
+
+
+### Thank you for using this program! I hope it helps you find the next larger number with ease.
