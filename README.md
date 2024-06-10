@@ -20,7 +20,7 @@ Prerequisites:
 
 ## Running the Program
 
-To run a program type `./MainFile.o` and then any number.
+To run a program type `./MainFile.o` to the terminal and then any number.
 
 ## For example:
 ### INPUT
