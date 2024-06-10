@@ -20,13 +20,16 @@ Prerequisites:
 
 ## Running the Program
 
-Execute the compiled program with the input number:
-
-`./MainFile.o`
+To run a program type `./MainFile.o` and then any number.
 
 ## For example:
 ### INPUT
-```1234```
+```
+./MainFile.o
+```
+```
+1234
+```
 ### OUTPUT
 ```2134```
 ## Algorithm
